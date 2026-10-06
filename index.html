@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For Boubou</title>
+<style>
+:root{--bg1:#1c0610;--bg2:#4a0d22;--rose:#e8456b;--gold:#f4c97a;--text:#fff4ec;--card:rgba(255,255,255,.07);--bd:rgba(244,201,122,.28);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#1c0610}}
+:root[data-theme="dark"]{--bg1:#1c0610}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:Georgia,'Times New Roman',serif;color:var(--text);background:linear-gradient(165deg,var(--bg1),var(--bg2),#2b0a1e);background-size:300% 300%;animation:bg 20s ease infinite;overflow-x:hidden;min-height:100vh}
+@keyframes bg{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:0}
+.p{position:absolute;bottom:-40px;opacity:0;animation:rise linear forwards}
+@keyframes rise{0%{transform:translateY(0) translateX(0) scale(.6) rotate(0);opacity:0}10%{opacity:.85}100%{transform:translateY(-110vh) translateX(var(--dx)) scale(1.1) rotate(160deg);opacity:0}}
+main{position:relative;z-index:1;max-width:720px;margin:0 auto;padding:0 22px 90px}
+section{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:26px 0}
+.hero{min-height:88vh}
+.crown{font-size:4rem;animation:float 3s ease-in-out infinite;filter:drop-shadow(0 0 18px rgba(244,201,122,.7))}
+@keyframes float{50%{transform:translateY(-12px) rotate(-4deg)}}
+h1{font-size:clamp(2.8rem,11vw,5.5rem);margin:6px 0 10px;letter-spacing:.04em;background:linear-gradient(90deg,var(--gold),var(--rose),var(--gold));background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:200% 0}}
+h2{font-size:clamp(1.5rem,5vw,2.2rem);color:var(--gold);margin:0 0 20px}
+p{line-height:1.75;font-size:1.12rem;margin:0 0 14px}
+.sub{color:var(--rose);letter-spacing:.2em;text-transform:uppercase;font-size:.85rem}
+.big{font-size:3.4rem;animation:beat 1.3s infinite;display:inline-block}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.25)}30%{transform:scale(1)}45%{transform:scale(1.18)}}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease;width:100%}
+.reveal.show{opacity:1;transform:none}
+.quote{font-style:italic;font-size:clamp(1.3rem,4.5vw,1.8rem);line-height:1.6;max-width:30ch;margin:0 auto}
+.words{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;width:100%}
+.words span{background:var(--card);border:1px solid var(--bd);border-radius:999px;padding:10px 20px;font-size:1.05rem;color:var(--gold);animation:glow 3s ease-in-out infinite}
+.words span:nth-child(2n){animation-delay:.8s;color:#ffb3c4}
+.words span:nth-child(3n){animation-delay:1.6s}
+@keyframes glow{50%{box-shadow:0 0 22px rgba(232,69,107,.55);transform:translateY(-3px)}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:22px;backdrop-filter:blur(8px);box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.promises{list-style:none;padding:0;margin:0;display:grid;gap:12px;width:100%;text-align:left}
+.promises li{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start}
+.promises li span{font-size:1.4rem}
+.btn{margin-top:18px;font:inherit;font-size:1.1rem;color:#2b0a1e;font-weight:bold;border:0;border-radius:999px;padding:14px 30px;cursor:pointer;background:linear-gradient(90deg,var(--gold),#ffd9a0);box-shadow:0 0 25px rgba(244,201,122,.45);transition:transform .2s}
+.btn:hover{transform:scale(1.06)}
+.btn.alt{background:transparent;color:var(--text);border:1px solid var(--bd);box-shadow:none;font-weight:normal}
+#answer{margin-top:20px;min-height:3em;font-size:1.15rem;color:var(--gold)}
+.scroll{position:absolute;bottom:28px;animation:bob 2s infinite;opacity:.7}
+@keyframes bob{50%{transform:translateY(8px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="fx"></div>
+<main>
+<section class="hero">
+  <div class="crown">👑</div>
+  <h1>Queen</h1>
+  <div class="sub">my queen, always &middot; my Boubou</div>
+  <p style="margin-top:22px">Boubou, this is for you, because you deserve words that are slow, careful, and true.</p>
+  <div class="scroll">scroll slowly ↓</div>
+</section>
+
+<section>
+  <p class="quote reveal">You chose me as your King, and I didn't even realize it.</p>
+  <p class="quote reveal" style="margin-top:26px;color:var(--gold)">Now I understand, Boubou.</p>
+<h2 class="reveal" style="margin-top:34px">Now I see it all</h2>
+  <div class="card reveal">
+    <p>Boubou, every moment you stood by me, every time you were patient, every time you gave me your heart: I see it now. I was walking beside a queen and didn't see the crown.</p>
+    <p style="margin:0">I'm sorry it took distance for me to understand, my Boubou. I'm sorry for the times I made you doubt me. Your trust was a gift, and I know I didn't hold it the way it deserved.</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="reveal">What my heart feels</h2>
+  <div class="words reveal">
+    <span>Love</span><span>Regret</span><span>Gratitude</span><span>Longing</span><span>Respect</span><span>Hope</span><span>Devotion</span><span>Tenderness</span><span>Humility</span>
+  </div>
+  <p class="reveal" style="margin-top:28px">Boubou, I miss your voice, your warmth, and the peace I feel when you're near.</p>
+</section>
+
+<section>
+  <ul class="promises" style="margin-bottom:30px">
+    <li class="reveal"><span>🌹</span><div>I will honor you with honesty, even when the truth is hard.</div></li>
+    <li class="reveal"><span>🕊️</span><div>I will give you all the space and time you need, and earn your trust back one day at a time.</div></li>
+  </ul>
+  <div class="big">❤️</div>
+  <h2 class="reveal">Still yours, always</h2>
+  <p class="reveal">You are my queen today, tomorrow, and always, my Boubou. Whatever you decide, you will always hold a special place in my heart.</p>
+  <p class="reveal">If you're willing, I'd love to talk when you're ready.</p>
+  <button class="btn" id="b1">I'm willing to talk 👑</button>
+  <button class="btn alt" id="b2">I need more time</button>
+  <div id="answer"></div>
+</section>
+</main>
+<script>
+const box=document.getElementById('fx'),sy=['🌹','❤️','✨','👑','💖','🌷'];
+function spawn(){const h=document.createElement('div');h.className='p';h.textContent=sy[Math.floor(Math.random()*sy.length)];
+h.style.left=Math.random()*100+'vw';h.style.fontSize=(14+Math.random()*20)+'px';h.style.setProperty('--dx',(Math.random()*140-70)+'px');
+h.style.animationDuration=(8+Math.random()*7)+'s';box.appendChild(h);setTimeout(()=>h.remove(),16000)}
+setInterval(spawn,650);for(let i=0;i<8;i++)setTimeout(spawn,i*200);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.2});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3)*.15+'s';io.observe(el)});
+const a=document.getElementById('answer');
+document.getElementById('b1').onclick=()=>{a.textContent='Thank you, Boubou. That means everything. 👑';for(let i=0;i<25;i++)setTimeout(spawn,i*60)};
+document.getElementById('b2').onclick=()=>{a.textContent='Take all the time you need. I will respect it. 🕊️'};
+</script>
+</body>
+</html>
